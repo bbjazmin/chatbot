@@ -12,6 +12,21 @@
 </head>
 
 <body>
+
+    <!-- Pop-up ablak -->
+<div id="profilePopup">
+    <span class="btn-close" onclick="closePopup()">&times;</span>
+    <img src="hello@reallygreatsite.com.jpg" alt="Profil Fotó">
+    <h2>Rövid Bemutatkozás</h2>
+    <p>Ez itt a szakmai bemutatkozásod rövid szövege.</p>
+    <a href="https://www.canva.com/design/DAGViqtw3Vg/8GM83DvJWAraa5NBSrF4sg/view?utm_content=DAGViqtw3Vg&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" class="btn btn-primary">Önéletrajz Megtekintése</a>
+</div>
+
+<!-- Gomb a pop-up megnyitásához -->
+<button onclick="showPopup()" class="btn btn-info">Önéletrajz Megtekintése</button>
+
+
+   
     <!-- Pop-up ablak -->
     <div id="profilePopup">
         <span class="btn-close" onclick="closePopup()">&times;</span>
@@ -180,6 +195,13 @@
                 window.qbOptions = []
             }
             window.qbOptions.push({ "baseUrl": "https://botsrv2.com", "use": "zGgLNrKDLQEqRAoJ/aPW6jrq8PVmR4ZXQ" });
+            function showPopup() {
+        document.getElementById("profilePopup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("profilePopup").style.display = "none";
+    }
         </script>
         <script type="text/javascript" src="https://static.botsrv2.com/website/js/widget2.js" crossorigin="anonymous"
             defer data-no-minify="1" data-cfasync="false"></script>
